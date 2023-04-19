@@ -1,0 +1,245 @@
+.body-wrapper {
+    main {
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .books-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            max-width: 100%;
+
+            .all-books-div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .book-div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 30px;
+                    text-align: center;
+                    min-width: 250px;
+                    max-width: 250px;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 16px;
+
+                        img {
+                            height: 150px;
+                        }
+                    }
+
+                    label {
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    input.addToList {
+                        appearance: none;
+                        width: 5px;
+                        height: 5px;
+                        padding: 10px;
+                        margin-left: 10px;
+                        border-radius: 50%;
+                    }
+
+                    input.addToList:checked {
+                        background-color: greenyellow;
+                    }
+
+                    div.rating-box {
+                        font-style: italic;
+                        font-size: 14px;
+
+
+                        div.stars {
+                            display: flex;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+
+                            .stars i {
+                                color: #e6e6e6;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width:600px) and (max-width: 1180px) {
+    .body-wrapper {
+        main {
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .books-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                max-width: 100%;
+
+                .all-books-div {
+                    justify-content: space-between;
+
+                    .book-div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 30px;
+                        text-align: center;
+                        min-width: 300px;
+                        max-width: 300px;
+
+                        a {
+                            min-width: 300px;
+                            max-width: 300px;
+                            padding: 10px;
+
+                            img {
+                                height: 200px;
+                            }
+                        }
+
+                        a:hover {
+                            color: grey;
+                        }
+
+                        button.addToList {
+                            background-color: rgb(219, 245, 181);
+                            padding: 20px;
+                            border-radius: 10px;
+                            font-size: 18px;
+                            margin-top: 10px;
+                            margin-bottom: 50px;
+                        }
+
+                        button.addToList:hover {
+                            background-color: green;
+                        }
+
+                        button.addToList:active {
+                            border: 5px solid black;
+                        }
+
+                        div.rating-box {
+                            color: rgb(115, 115, 115);
+                            font-style: italic;
+
+                            div.stars {
+                                display: flex;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1181px) {
+    .body-wrapper {
+        main {
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .books-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                max-width: 100%;
+
+                .all-books-div {
+                    justify-content: space-between;
+
+                    .book-div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 30px;
+                        text-align: center;
+                        min-width: 400px;
+                        max-width: 400px;
+
+                        a {
+                            color: black;
+                            text-decoration: none;
+                            font-size: 26px;
+                            min-width: 300px;
+                            max-width: 300px;
+                            padding: 10px;
+
+                            img {
+                                height: 230px;
+                            }
+                        }
+
+                        a:hover {
+                            color: grey;
+                        }
+
+                        button.addToList {
+                            background-color: rgb(219, 245, 181);
+                            padding: 20px;
+                            border-radius: 10px;
+                            font-size: 18px;
+                            margin-top: 10px;
+                            margin-bottom: 50px;
+                        }
+
+                        button.addToList:hover {
+                            background-color: green;
+                        }
+
+                        button.addToList:active {
+                            border: 5px solid black;
+                        }
+
+                        div.rating-box {
+                            color: rgb(115, 115, 115);
+                            font-style: italic;
+                            padding: 10px;
+                            font-size: 22px;
+
+
+                            div.stars {
+                                display: flex;
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

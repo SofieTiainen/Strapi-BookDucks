@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ducks - Bokspecifikation</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="javascript/renderStyle.js" defer></script>
+    <script src="javascript/chosenbook.js" defer></script>
+    <script src="javascript/loginfunction.js" defer></script>
+</head>
+
+<body>
+    <div class="body-wrapper">
+        <header>
+            <img class="background-img" src="assets/dddk.jpg" alt="">
+            <div class="h1-and-logo">
+                <h1>BOOK DUCKS</h1>
+            </div>
+            <h2 id="h2">Logged in as: <span id="welcome-username"></span></h2>
+            <button id="open-login-box">Logga in</button>
+            <button id="logoutBtn">Logga ut</button>
+            <div class="login-open-close-box">
+                <div class="login-box">
+                    <div>
+                        <label for="loginUsername">Användarnamn/Email</label><br>
+                        <input type="text" id="loginUsername" placeholder="Användarnamn/Email" />
+                    </div><br>
+                    <div>
+                        <label for="loginPassword">Lösenord</label><br>
+                        <input type="password" id="loginPassword" placeholder="Lösenord" />
+                    </div>
+                    <button id="loginBtn">LOGGA IN</button>
+                    <button id="close-login-box">STÄNG FÖNSTER</button>
+                </div>
+            </div>
+            <ul>
+                <li><a href="index.html">BÖCKER</a></li>
+                <li><a href="profileside.html">MINA SIDOR</a></li>
+                <li><a href="registrering.html">SKAPA KONTO</a></li>
+            </ul>
+        </header>
+        <main>
+            <main>
+                <div class="chosen-book-div"></div>
+            </main>
+            <footer>
+                <h2>Book Ducks</h2>
+                <ul>
+                    <li><a href="index.html">Böcker</a></li>
+                    <li><a href="profileside.html">Mina sidor</a></li>
+                    <li><a href="registrering.html">Skapa konto</a></li>
+                </ul>
+            </footer>
+    </div>
+</body>
+
+</html>

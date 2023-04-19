@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ducks - Mina Sidor</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="javascript/renderStyle.js" defer></script>
+    <script src="javascript/readinglist.js" defer></script>
+    <script src="javascript/ratedbooks.js" defer></script>
+    <script src="javascript/loginfunction.js" defer></script>
+
+</head>
+
+<body>
+    <div class="body-wrapper">
+        <header>
+            <img class="background-img" src="assets/dddk.jpg" alt="">
+            <div class="h1-and-logo">
+                <h1>BOOK DUCKS</h1>
+            </div>
+            <h2 id="h2">Logged in as: <span id="welcome-username"></span></h2>
+            <button id="open-login-box">Logga in</button>
+            <button id="logoutBtn">Logga ut</button>
+            <div class="login-open-close-box">
+                <div class="login-box">
+                    <div>
+                        <label for="loginUsername">Användarnamn/Email</label><br>
+                        <input type="text" id="loginUsername" placeholder="Användarnamn/Email" />
+                    </div><br>
+                    <div>
+                        <label for="loginPassword">Lösenord</label><br>
+                        <input type="password" id="loginPassword" placeholder="Lösenord" />
+                    </div>
+                    <button id="loginBtn">LOGGA IN</button>
+                    <button id="close-login-box">STÄNG FÖNSTER</button>
+                </div>
+            </div>
+            <ul>
+                <li><a href="index.html">BÖCKER</a></li>
+                <li><a href="profileside.html">MINA SIDOR</a></li>
+                <li><a href="registrering.html">SKAPA KONTO</a></li>
+            </ul>
+        </header>
+        <main class="profile-page">
+            <div class="public-view-profile-side">
+                <h2>Logga in eller <a href="registrering.html">registrera konto</a> för att få tillgång till Mina Sidor
+                </h2>
+            </div>
+            <div class="user-view-profile-side">
+                <div class="headers">
+                    <div class="toggle-headers">
+                        <button id="reading-list-btn">Min Att Läsa lista</button>
+                        <button id="rated-books-btn">Mina betygsatta böcker</button>
+                    </div>
+                </div>
+                <div class="user-reading-div">
+                    <h2>Min Att-läsa lista</h2>
+
+                    <ul id="reading-ul"></ul>
+                </div>
+                <div class="user-rated-books-div" hidden>
+                    <div class="h2-and-select-div">
+                        <h2>Mina betygsatta böcker</h2>
+                        <ul class="rating-ul"></ul>
+                        <select id="sortBooks">
+                            <option hidden value="">Sortera</option>
+                            <option value="title_A_Ö">Titel (A-Ö)</option>
+                            <option value="title_Ö_A">Titel (Ö-A)</option>
+                            <option value="author_A_Ö">Författare (A-Ö)</option>
+                            <option value="author_Ö_A">Författare (Ö-A)</option>
+                            <option value="rate_high_low">Betyg (Högst till lägst)</option>
+                            <option value="rate_low_high">Betyg (Lägst till högst)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h2>Book Ducks</h2>
+            <ul>
+                <li><a href="index.html">Böcker</a></li>
+                <li><a href="profileside.html">Mina sidor</a></li>
+                <li><a href="registrering.html">Skapa konto</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

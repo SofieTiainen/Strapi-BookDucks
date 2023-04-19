@@ -1,0 +1,184 @@
+.body-wrapper.dark {
+    main.profile-page {
+        .public-view-profile-side {
+            h2 {
+                color: black
+            }
+
+            a {
+                color: #edbfc4;
+            }
+        }
+
+        .headers {
+            div.toggle-headers {
+                button {
+                    background-color: #272727;
+                    color: white;
+                }
+            }
+        }
+
+        .user-reading-div {
+            ul#reading-ul {
+                li {
+                    border-top: 1px solid white;
+                    color: white;
+                }
+
+                button {
+                    padding: 20px;
+                    background-color: white;
+                }
+            }
+        }
+
+        .user-rated-books-div {
+
+            ul.rating-ul {
+                color: white;
+            }
+        }
+    }
+}
+
+.body-wrapper.light {
+    main.profile-page {
+        .public-view-profile-side {
+            h2 {
+                color: black;
+            }
+
+            a {
+                color: black;
+            }
+        }
+
+        .headers {
+            div.toggle-headers {
+                button {
+                    background-color: #ffffff;
+                    color: rgb(0, 0, 0);
+                }
+            }
+        }
+
+        .user-reading-div {
+            ul#reading-ul {
+                li {
+                    border-top: 1px solid black;
+                    color: black;
+                }
+
+                button {
+                    padding: 20px;
+                    background-color: rgb(237, 237, 237);
+                }
+            }
+        }
+
+        .user-rated-books-div {
+            ul.rating-ul {
+                color: black;
+            }
+        }
+    }
+}
+
+.body-wrapper {
+    main.profile-page {
+        .public-view-profile-side {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .headers {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+
+            div.toggle-headers {
+                display: flex;
+                border-radius: 20px;
+
+                button {
+                    padding: 20px;
+                    border: none;
+                    border-radius: 50px;
+                    font-size: 24px;
+                }
+
+                button:active {
+                    text-decoration: underline;
+                }
+
+            }
+        }
+
+        .user-reading-div {
+
+            ul#reading-ul {
+                padding: 50px;
+
+                li {
+                    list-style-position: inside;
+                    list-style-type: none;
+                    padding: 50px;
+                    font-size: 24px;
+                }
+
+                button {
+                    padding: 20px;
+                    border-radius: 20px;
+                }
+
+                .user-reading-div {
+                    ul#reading-ul {
+                        li {
+                            border-top: 1px solid white;
+                            color: white;
+                        }
+
+                        button {
+                            padding: 20px;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .user-rated-books-div {
+            .h2-and-select-div {
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .user-rated-books-div {
+
+            ul.rating-ul {
+                color: white;
+
+                li {
+                    padding-bottom: 30px;
+                    padding-left: 30px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1189px) {
+    .body-wrapper {
+        main.profile-page {
+            .public-view-profile-side {
+                height: 100vh;
+            }
+        }
+    }
+
+}

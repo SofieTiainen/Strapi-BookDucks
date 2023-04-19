@@ -1,0 +1,865 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.stars i {
+  color: #bcbcbc;
+}
+
+.stars i.rated {
+  color: rgb(52, 52, 52);
+}
+
+.stars i.active {
+  color: #ffff1a;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.body-wrapper.dark header div.login-open-close-box {
+  background-color: rgba(52, 52, 52, 0.813);
+}
+.body-wrapper.dark header div.login-open-close-box div.login-box {
+  color: white;
+}
+.body-wrapper.dark header ul {
+  background-color: #272727;
+}
+.body-wrapper.dark main {
+  background-color: #272727;
+}
+.body-wrapper.dark h2 {
+  color: white;
+}
+.body-wrapper.dark p {
+  color: white;
+}
+.body-wrapper.dark div.books-container {
+  background-color: #272727;
+}
+.body-wrapper.dark div.books-container div.all-books-div {
+  background-color: #272727;
+}
+.body-wrapper.dark div.books-container div.all-books-div div.book-div a {
+  color: #e6e6e6;
+}
+.body-wrapper.dark div.books-container div.all-books-div div.book-div div.rating-box {
+  color: white;
+}
+.body-wrapper.dark div.books-container div.all-books-div div.book-div div.rating-box div.stars {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.body-wrapper.dark div.books-container div.all-books-div div.book-div label {
+  color: white;
+}
+.body-wrapper.dark div.books-container div.all-books-div div.book-div label input#addToListCheckbox {
+  border: 1px solid white;
+}
+
+.body-wrapper.light header div.login-open-close-box {
+  background-color: rgba(255, 255, 255, 0.813);
+}
+.body-wrapper.light header div.login-open-close-box div.login-box {
+  color: black;
+}
+.body-wrapper.light header ul {
+  background-color: black;
+}
+.body-wrapper.light main {
+  background-color: white;
+}
+.body-wrapper.light h2 {
+  color: black;
+}
+.body-wrapper.light p {
+  color: black;
+}
+.body-wrapper.light div.books-container {
+  background-color: white;
+}
+.body-wrapper.light div.books-container div.all-books-div {
+  background-color: white;
+}
+.body-wrapper.light div.books-container div.all-books-div div.book-div a {
+  color: black;
+}
+.body-wrapper.light div.books-container div.all-books-div div.book-div a:hover {
+  color: grey;
+}
+.body-wrapper.light div.books-container div.all-books-div div.book-div div.rating-box {
+  color: black;
+}
+.body-wrapper.light div.books-container div.all-books-div div.book-div div.rating-box div.stars {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.body-wrapper.light div.books-container div.all-books-div div.book-div div.rating-box div.stars button {
+  background-color: white;
+}
+.body-wrapper.light div.books-container div.all-books-div div.book-div label {
+  color: black;
+}
+.body-wrapper.light div.books-container div.all-books-div div.book-div label input#addToListCheckbox {
+  border: 1px solid black;
+}
+
+.body-wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+.body-wrapper header {
+  position: relative;
+  background-color: black;
+}
+.body-wrapper header img.background-img {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 50vh;
+}
+.body-wrapper header div.h1-and-logo h1 {
+  position: absolute;
+  left: 20%;
+  top: 5%;
+  color: black;
+  font-size: 7px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgb(88, 88, 88);
+  margin-top: 20px;
+  letter-spacing: 1px;
+  transform: scale(2);
+}
+.body-wrapper header #h2 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: white;
+}
+.body-wrapper header #open-login-box {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 3;
+  padding: 10px;
+}
+.body-wrapper header #logoutBtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 3;
+  padding: 10px;
+}
+.body-wrapper header div.login-open-close-box {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40vh;
+  padding: 50px 30px 20px 30px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  max-width: 100%;
+}
+.body-wrapper header div.login-open-close-box div.login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.body-wrapper header div.login-open-close-box div.login-box input {
+  font-size: 16px;
+  max-height: 35px;
+  min-height: 35px;
+  padding-left: 5px;
+  max-width: 60%;
+}
+.body-wrapper header div.login-open-close-box div.login-box button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.body-wrapper header div.login-open-close-box div.login-box button#loginBtn {
+  background-color: #000000;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.body-wrapper header div.login-open-close-box div.login-box button#close-login-box {
+  margin-top: 5px;
+  background-color: rgba(255, 55, 55, 0.701);
+  color: white;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.body-wrapper header ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.body-wrapper header ul li {
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 10px;
+  font-size: 12px;
+}
+.body-wrapper header ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  letter-spacing: 3px;
+  padding: 10px;
+  font-weight: 600;
+}
+.body-wrapper header ul li a:hover {
+  text-decoration: underline;
+}
+.body-wrapper main {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-bottom: 150px;
+}
+.body-wrapper footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.body-wrapper footer ul {
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.body-wrapper footer ul li {
+  padding: 10px;
+  text-align: center;
+}
+.body-wrapper footer ul li a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 5px;
+  letter-spacing: 3px;
+  padding: 10px;
+  font-weight: 600;
+}
+.body-wrapper footer ul li a:hover {
+  text-decoration: underline;
+}
+.body-wrapper footer h2 {
+  color: white;
+  font-size: 26px;
+  padding-top: 20px;
+}
+
+@media (min-width: 400px) and (max-width: 900px) {
+  .body-wrapper header img.background-img {
+    max-height: 50vh;
+  }
+  .body-wrapper header div.h1-and-logo {
+    top: 35%;
+  }
+  .body-wrapper header div.h1-and-logo img.icon {
+    width: 40%;
+  }
+  .body-wrapper header div.h1-and-logo h1 {
+    font-size: 12px;
+    margin-top: 40px;
+  }
+  .body-wrapper header #h2 {
+    font-size: 14px;
+  }
+  .body-wrapper header div.login-open-close-box {
+    padding: 50px 30px 10px 30px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box input {
+    max-width: 80%;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box button {
+    font-size: 16px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box button#close-login-box {
+    margin-top: 35px;
+  }
+}
+@media (min-width: 901px) and (max-width: 1400px) {
+  .body-wrapper header img.background-img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 50vh;
+  }
+  .body-wrapper header div.h1-and-logo {
+    top: 35%;
+  }
+  .body-wrapper header div.h1-and-logo img.icon {
+    width: 40%;
+  }
+  .body-wrapper header div.h1-and-logo h1 {
+    font-size: 28px;
+    margin-top: 60px;
+    left: 15%;
+  }
+  .body-wrapper header #h2 {
+    font-size: 16px;
+  }
+  .body-wrapper header div.login-open-close-box {
+    padding: 50px 30px 10px 30px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box input {
+    max-width: 200px;
+    min-width: 200px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box button {
+    font-size: 16px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box button#close-login-box {
+    margin-top: 35px;
+  }
+  .body-wrapper header ul {
+    justify-content: space-around;
+  }
+  .body-wrapper header ul li {
+    font-size: 16px;
+  }
+  .body-wrapper footer ul li {
+    padding: 5px;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+  .body-wrapper header img.background-img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 50vh;
+  }
+  .body-wrapper header div.h1-and-logo {
+    top: 35%;
+  }
+  .body-wrapper header div.h1-and-logo img.icon {
+    width: 40%;
+  }
+  .body-wrapper header div.h1-and-logo h1 {
+    font-size: 30px;
+    margin-top: 60px;
+    left: 15%;
+  }
+  .body-wrapper header #h2 {
+    font-size: 18px;
+  }
+  .body-wrapper header div.login-open-close-box {
+    padding: 50px 30px 10px 30px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box input {
+    max-width: 200px;
+    min-width: 200px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box button {
+    font-size: 16px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box button#close-login-box {
+    margin-top: 35px;
+  }
+  .body-wrapper header ul {
+    justify-content: space-around;
+  }
+  .body-wrapper header ul li {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1600px) {
+  .body-wrapper header img.background-img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 50vh;
+  }
+  .body-wrapper header div.h1-and-logo {
+    top: 35%;
+  }
+  .body-wrapper header div.h1-and-logo img.icon {
+    width: 40%;
+  }
+  .body-wrapper header div.h1-and-logo h1 {
+    font-size: 30px;
+    margin-top: 60px;
+    left: 10%;
+  }
+  .body-wrapper header #h2 {
+    font-size: 20px;
+  }
+  .body-wrapper header #open-login-box {
+    right: 30px;
+  }
+  .body-wrapper header #logoutBtn {
+    right: 30px;
+  }
+  .body-wrapper header div.login-open-close-box {
+    padding: 70px 70px 20px 50px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box {
+    font-size: 22px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box input {
+    max-width: 250px;
+    min-width: 250px;
+    font-size: 20px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box button {
+    font-size: 18px;
+  }
+  .body-wrapper header div.login-open-close-box div.login-box button#close-login-box {
+    margin-top: 70px;
+  }
+  .body-wrapper header ul {
+    justify-content: space-around;
+  }
+  .body-wrapper header ul li {
+    font-size: 22px;
+  }
+}
+.body-wrapper main h2 {
+  font-size: 18px;
+}
+.body-wrapper main p {
+  font-size: 16px;
+}
+.body-wrapper main .books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  max-width: 100%;
+}
+.body-wrapper main .books-container .all-books-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.body-wrapper main .books-container .all-books-div .book-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  min-width: 250px;
+  max-width: 250px;
+}
+.body-wrapper main .books-container .all-books-div .book-div a {
+  text-decoration: none;
+  font-size: 16px;
+}
+.body-wrapper main .books-container .all-books-div .book-div a img {
+  height: 150px;
+}
+.body-wrapper main .books-container .all-books-div .book-div label {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.body-wrapper main .books-container .all-books-div .book-div input.addToList {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 5px;
+  height: 5px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.body-wrapper main .books-container .all-books-div .book-div input.addToList:checked {
+  background-color: greenyellow;
+}
+.body-wrapper main .books-container .all-books-div .book-div div.rating-box {
+  font-style: italic;
+  font-size: 14px;
+}
+.body-wrapper main .books-container .all-books-div .book-div div.rating-box div.stars {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.body-wrapper main .books-container .all-books-div .book-div div.rating-box div.stars .stars i {
+  color: #e6e6e6;
+}
+
+@media (min-width: 600px) and (max-width: 1180px) {
+  .body-wrapper main h2 {
+    font-size: 20px;
+  }
+  .body-wrapper main p {
+    font-size: 18px;
+  }
+  .body-wrapper main .books-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    max-width: 100%;
+  }
+  .body-wrapper main .books-container .all-books-div {
+    justify-content: space-between;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    min-width: 300px;
+    max-width: 300px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div a {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div a img {
+    height: 200px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div a:hover {
+    color: grey;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div button.addToList {
+    background-color: rgb(219, 245, 181);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div button.addToList:hover {
+    background-color: green;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div button.addToList:active {
+    border: 5px solid black;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div div.rating-box {
+    color: rgb(115, 115, 115);
+    font-style: italic;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div div.rating-box div.stars {
+    display: flex;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1181px) {
+  .body-wrapper main h2 {
+    font-size: 32px;
+  }
+  .body-wrapper main p {
+    font-size: 18px;
+  }
+  .body-wrapper main .books-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    max-width: 100%;
+  }
+  .body-wrapper main .books-container .all-books-div {
+    justify-content: space-between;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    text-align: center;
+    min-width: 400px;
+    max-width: 400px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div a {
+    color: black;
+    text-decoration: none;
+    font-size: 26px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div a img {
+    height: 230px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div a:hover {
+    color: grey;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div button.addToList {
+    background-color: rgb(219, 245, 181);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div button.addToList:hover {
+    background-color: green;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div button.addToList:active {
+    border: 5px solid black;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div div.rating-box {
+    color: rgb(115, 115, 115);
+    font-style: italic;
+    padding: 10px;
+    font-size: 22px;
+  }
+  .body-wrapper main .books-container .all-books-div .book-div div.rating-box div.stars {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+.body-wrapper.dark main {
+  background-color: #272727;
+}
+.body-wrapper.dark main .register-big-container ul {
+  color: white;
+}
+.body-wrapper.dark main .register-big-container .register-container .register-box {
+  background-color: #edbfc4;
+}
+
+.body-wrapper.light main {
+  background-color: white;
+}
+.body-wrapper.light main .register-big-container ul {
+  color: black;
+}
+.body-wrapper.light main .register-big-container .register-container .register-box {
+  background-color: rgb(210, 223, 234);
+}
+
+.body-wrapper main .register-big-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.body-wrapper main .register-big-container ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.body-wrapper main .register-big-container ul li {
+  list-style-position: inside;
+  list-style-type: none;
+  font-size: 16px;
+  padding-top: 15px;
+}
+.body-wrapper main .register-big-container .register-container {
+  margin-top: 80px;
+}
+.body-wrapper main .register-big-container .register-container .register-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid rgba(0, 0, 0, 0.47);
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.body-wrapper main .register-big-container .register-container .register-box input {
+  font-size: 14px;
+  border-radius: 3px;
+  max-height: 25px;
+  min-height: 25px;
+  padding-left: 5px;
+  border: 1px solid black;
+}
+.body-wrapper main .register-big-container .register-container .register-box button {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 45px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  max-width: 60%;
+}
+
+@media (min-width: 500px) and (max-width: 1188px) {
+  .body-wrapper main .register-big-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+  }
+  .body-wrapper main .register-big-container ul {
+    padding: 20px;
+  }
+}
+@media (min-width: 1189px) {
+  .body-wrapper main .register-big-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 20px;
+  }
+  .body-wrapper main .register-big-container ul {
+    font-size: 32px;
+    max-width: 30%;
+  }
+  .body-wrapper main .register-big-container ul li {
+    list-style-position: inside;
+    list-style-type: none;
+    font-size: 24px;
+    padding-top: 15px;
+  }
+  .body-wrapper main .register-big-container .register-container {
+    margin-top: 80px;
+  }
+  .body-wrapper main .register-big-container .register-container .register-box {
+    padding: 55px;
+    font-size: 22px;
+    max-width: 450px;
+    min-width: 450px;
+  }
+  .body-wrapper main .register-big-container .register-container .register-box input {
+    font-size: 20px;
+    border-radius: 3px;
+    max-height: 35px;
+    min-height: 35px;
+    padding-left: 5px;
+    border: 1px solid black;
+    min-width: 80%;
+  }
+  .body-wrapper main .register-big-container .register-container .register-box button {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    max-width: 100%;
+    font-weight: 600;
+  }
+}
+.body-wrapper.dark main.profile-page .public-view-profile-side h2 {
+  color: black;
+}
+.body-wrapper.dark main.profile-page .public-view-profile-side a {
+  color: #edbfc4;
+}
+.body-wrapper.dark main.profile-page .headers div.toggle-headers button {
+  background-color: #272727;
+  color: white;
+}
+.body-wrapper.dark main.profile-page .user-reading-div ul#reading-ul li {
+  border-top: 1px solid white;
+  color: white;
+}
+.body-wrapper.dark main.profile-page .user-reading-div ul#reading-ul button {
+  padding: 20px;
+  background-color: white;
+}
+.body-wrapper.dark main.profile-page .user-rated-books-div ul.rating-ul {
+  color: white;
+}
+
+.body-wrapper.light main.profile-page .public-view-profile-side h2 {
+  color: black;
+}
+.body-wrapper.light main.profile-page .public-view-profile-side a {
+  color: black;
+}
+.body-wrapper.light main.profile-page .headers div.toggle-headers button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.body-wrapper.light main.profile-page .user-reading-div ul#reading-ul li {
+  border-top: 1px solid black;
+  color: black;
+}
+.body-wrapper.light main.profile-page .user-reading-div ul#reading-ul button {
+  padding: 20px;
+  background-color: rgb(237, 237, 237);
+}
+.body-wrapper.light main.profile-page .user-rated-books-div ul.rating-ul {
+  color: black;
+}
+
+.body-wrapper main.profile-page .public-view-profile-side {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.body-wrapper main.profile-page .headers {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.body-wrapper main.profile-page .headers div.toggle-headers {
+  display: flex;
+  border-radius: 20px;
+}
+.body-wrapper main.profile-page .headers div.toggle-headers button {
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+}
+.body-wrapper main.profile-page .headers div.toggle-headers button:active {
+  text-decoration: underline;
+}
+.body-wrapper main.profile-page .user-reading-div ul#reading-ul {
+  padding: 50px;
+}
+.body-wrapper main.profile-page .user-reading-div ul#reading-ul li {
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 50px;
+  font-size: 24px;
+}
+.body-wrapper main.profile-page .user-reading-div ul#reading-ul button {
+  padding: 20px;
+  border-radius: 20px;
+}
+.body-wrapper main.profile-page .user-reading-div ul#reading-ul .user-reading-div ul#reading-ul li {
+  border-top: 1px solid white;
+  color: white;
+}
+.body-wrapper main.profile-page .user-reading-div ul#reading-ul .user-reading-div ul#reading-ul button {
+  padding: 20px;
+  background-color: white;
+}
+.body-wrapper main.profile-page .user-rated-books-div .h2-and-select-div {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.body-wrapper main.profile-page .user-rated-books-div ul.rating-ul {
+  color: white;
+}
+.body-wrapper main.profile-page .user-rated-books-div ul.rating-ul li {
+  padding-bottom: 30px;
+  padding-left: 30px;
+  font-size: 22px;
+}
+
+@media (min-width: 1189px) {
+  .body-wrapper main.profile-page .public-view-profile-side {
+    height: 100vh;
+  }
+}/*# sourceMappingURL=style.css.map */
