@@ -30,6 +30,7 @@ ratedBooksBtn.addEventListener("click", () => {
 let getAllRates = async () => {
     let response = await axios.get("http://localhost:1337/api/books?populate=deep,3");
     let books = response.data.data;
+    console.log("Från getAllRates: ", books)
     getAllRatesForUser(books);
 }
 
@@ -43,7 +44,7 @@ let getAllRatesForUser = async (array) => {
     array.forEach(book => {
         let userratings = book.attributes.userrating;
         userratings.forEach(rating => {
-            let id = rating.users_permissions_user.data.id.toString();
+            let id = rating.users_permissions_user.data?.id?.toString();
 
             if (id == sessionStorage.getItem("loginId")) {
 
